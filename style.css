@@ -1061,3 +1061,39 @@ h1 {
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
+/* PRINT FIX */
+@media print {
+  body {
+    overflow: visible !important;
+  }
+
+  .section-padding {
+    padding: 2rem 0 !important;
+  }
+
+  .hero,
+  .contact,
+  .projects,
+  .skills,
+  .about {
+    page-break-inside: avoid;
+  }
+
+  .project-card,
+  .skill-category,
+  .glass-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+
+  .navbar,
+  .mobile-nav,
+  .theme-toggle,
+  .btn {
+    display: none !important;
+  }
+}

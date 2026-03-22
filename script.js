@@ -1,4 +1,9 @@
 /* script.js */
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights();
+
 document.addEventListener('DOMContentLoaded', () => {
   // Theme Toggle
   const themeToggle = document.getElementById('theme-toggle');

@@ -5,7 +5,7 @@ import { open } from "sqlite";
 import nodemailer from "nodemailer";
 import path from "path";
 import { fileURLToPath } from "url";
-import { Analytics } from "@vercel/analytics/next"
+// Note: @vercel/analytics is for client-side only, not needed in server.js
 
 
 const __filename = fileURLToPath(import.meta.url);

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheetal Subbannavar | Full-Stack Developer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+        <div class="logo-text">Sheetal<span>.dev</span></div>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle">
+          <i data-lucide="moon"></i>
+        </button>
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Nav -->
+      <div id="mobile-nav" class="mobile-nav">
+        <a href="#home" class="mobile-nav-link">Home <i data-lucide="sparkles"></i></a>
+        <a href="#about" class="mobile-nav-link">About <i data-lucide="sparkles"></i></a>
+        <a href="#education" class="mobile-nav-link">Education <i data-lucide="sparkles"></i></a>
+        <a href="#skills" class="mobile-nav-link">Skills <i data-lucide="sparkles"></i></a>
+        <a href="#projects" class="mobile-nav-link">Projects <i data-lucide="sparkles"></i></a>
+        <a href="#contact" class="mobile-nav-link">Contact <i data-lucide="sparkles"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg-blob blob-1"></div>
+    <div class="hero-bg-blob blob-2"></div>
+    
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge reveal"><i data-lucide="briefcase"></i> Actively Seeking SDE Roles | 2027 Grad</div>
+        <h1 class="reveal">Full Stack <span class="italic serif">Engineer</span> | <br> MERN & Java Specialist.</h1>
+        <p class="hero-description reveal">
+          Building <span>scalable systems</span> with algorithmic precision. I specialize in modern full-stack architectures and high-performance backend logic.
+        </p>
+        
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View Projects <i data-lucide="code"></i></a>
+          <a href="#resume" class="btn btn-outline">Download Resume <i data-lucide="file-text"></i></a>
+          <div class="social-links">
+            <a href="https://github.com/SHEETAL-SUBBANNAVAR" target="_blank" class="social-link" title="GitHub"><i data-lucide="github"></i></a>
+            <a href="https://www.linkedin.com/in/sheetal-shripal-subbannavar-16631a322/" target="_blank" class="social-link" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:sheetalsubbannavar.52@gmail.com" class="social-link" title="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal">
+        <div class="glass-card">
+          <div class="stats-mini-grid">
+            <div class="mini-stat">
+              <span class="num">200+</span>
+              <span class="lab">DSA Solved</span>
+            </div>
+            <div class="mini-stat">
+              <span class="num">8.1</span>
+              <span class="lab">CGPA</span>
+            </div>
+          </div>
+          
+          <div class="code-block">
+            <div class="code-dots">
+              <div class="dot dot-red"></div>
+              <div class="dot dot-yellow"></div>
+              <div class="dot dot-green"></div>
+            </div>
+            <p style="color: var(--accent); font-weight: 700;">class SoftwareEngineer {</p>
+            <p style="padding-left: 1rem; color: #10b981;">String focus = "Scalability";</p>
+            <p style="padding-left: 1rem; color: #10b981;">String stack = "MERN + Java";</p>
+            <p style="padding-left: 1rem; color: #818cf8;">void solve(Problem p) {</p>
+            <p style="padding-left: 2rem; color: #f97316;">return p.optimize().build();</p>
+            <p style="padding-left: 1rem; color: #818cf8;">}</p>
+            <p style="font-weight: 700;">}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Hire Me Section -->
+  <section id="why-hire-me" class="why-hire section-padding">
+    <div class="container reveal">
+      <div class="badge"><i data-lucide="award"></i> Value Proposition</div>
+      <h2 class="section-title">Why <span>Hire</span> Me?</h2>
+      
+      <div class="why-hire-grid">
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="brain"></i></div>
+          <h3>Algorithmic Excellence</h3>
+          <p>Solved 200+ DSA problems on LeetCode/GFG, demonstrating strong logical reasoning and optimization skills for complex systems.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="layers"></i></div>
+          <h3>Full-Stack Proficiency</h3>
+          <p>Hands-on experience building end-to-end applications with the MERN stack, focusing on clean code, RESTful APIs, and responsive UI.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="coffee"></i></div>
+          <h3>Java Specialist</h3>
+          <p>Deep understanding of Object-Oriented Programming and backend development using Java, JDBC, and relational databases.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="trending-up"></i></div>
+          <h3>Impact-Driven</h3>
+          <p>Proven track record of building functional systems like Hotel and Bank Management with a focus on real-world utility and performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container reveal">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="badge"><i data-lucide="user"></i> Professional Profile</div>
+          <h2 class="section-title">Engineering <span>Solutions</span> <br> with Modern Tech.</h2>
+          
+          <div class="about-text">
+            <ul class="impact-list">
+              <li><i data-lucide="check-circle" class="text-accent"></i> <strong>Information Science Engineer:</strong> Pursuing B.E. at DBIT Bengaluru with a focus on Software Engineering principles.</li>
+              <li><i data-lucide="check-circle" class="text-accent"></i> <strong>Full-Stack Expertise:</strong> Specialized in building end-to-end applications using MongoDB, Express, React, and Node.js.</li>
+              <li><i data-lucide="check-circle" class="text-accent"></i> <strong>Algorithmic Thinking:</strong> Solved 200+ problems on LeetCode/GeeksforGeeks, mastering Data Structures and Algorithms in Java.</li>
+              <li><i data-lucide="check-circle" class="text-accent"></i> <strong>Performance Driven:</strong> Passionate about optimizing database queries and frontend rendering for seamless user experiences.</li>
+            </ul>
+          </div>
+          
+          <div class="about-features">
+            <div class="feature-card">
+              <div class="feature-icon icon-blue"><i data-lucide="code"></i></div>
+              <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Clean Code</h4>
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">Adhering to SOLID principles and writing maintainable, scalable codebases.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon icon-orange"><i data-lucide="layers"></i></div>
+              <h4 style="font-weight: 700; margin-bottom: 0.5rem;">System Design</h4>
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">Understanding of architectural patterns and database normalization.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-stats">
+          <div class="bento-grid">
+            <div class="bento-item stat-card accent">
+              <span class="stat-number">200+</span>
+              <span class="stat-label">LeetCode Problems</span>
+            </div>
+            <div class="bento-item stat-card dark">
+              <span class="stat-number">8.1</span>
+              <span class="stat-label">Current CGPA</span>
+            </div>
+            <div class="bento-item stat-card dark" style="background: #6366f1; color: white;">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="bento-item stat-card dark" style="background: var(--primary); color: white;">
+              <span class="stat-number">MERN</span>
+              <span class="stat-label">Core Specialization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education section-padding">
+    <div class="container reveal">
+      <div class="badge"><i data-lucide="graduation-cap"></i> Academic Foundation</div>
+      <h2 class="section-title">Academic <span>Excellence</span></h2>
+      
+      <div class="education-list">
+        <div class="education-card">
+          <div class="edu-header">
+            <div class="edu-meta">
+              <p class="edu-period">2023 – 2027</p>
+              <p class="edu-grade">CGPA: 8.1 / 10</p>
+            </div>
+            <h3 class="edu-institution">Don Bosco Institute of Technology, Bengaluru</h3>
+          </div>
+          <div class="edu-content">
+            <h4 class="edu-degree">B.E. in Information Science & Engineering</h4>
+            <p class="edu-description">Specializing in Software Engineering, Database Management, and Operating Systems. Actively involved in technical workshops and department-level coding competitions.</p>
+            <div class="edu-achievements">
+              <span class="achievement-tag">Core CS Fundamentals</span>
+              <span class="achievement-tag">System Design</span>
+              <span class="achievement-tag">Team Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats & Achievements -->
+  <section id="stats" class="stats-section section-padding">
+    <div class="container reveal">
+      <div class="stats-grid-bento">
+        <div class="stat-bento-card">
+          <i data-lucide="code-2"></i>
+          <h3>200+</h3>
+          <p>DSA Problems Solved</p>
+          <span class="platform">LeetCode & GFG</span>
+        </div>
+        <div class="stat-bento-card">
+          <i data-lucide="github"></i>
+          <h3>200+</h3>
+          <p>GitHub Contributions</p>
+          <span class="platform">Last 12 Months</span>
+        </div>
+        <div class="stat-bento-card">
+          <i data-lucide="award"></i>
+          <h3>Top 10%</h3>
+          <p>In Technical Assessments</p>
+          <span class="platform">Department Level</span>
+        </div>
+        <div class="stat-bento-card">
+          <i data-lucide="git-branch"></i>
+          <h3>10+</h3>
+          <p>Production-Ready Projects</p>
+          <span class="platform">Full Stack Focus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section-padding">
+    <div class="container reveal">
+      <div class="badge"><i data-lucide="zap"></i> Expertise</div>
+      <h2 class="section-title">Technical <span>Skillset</span></h2>
+      
+      <div class="skills-grid">
+        <!-- Core Languages -->
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon" style="background: rgba(249, 115, 22, 0.1); color: #f97316;"><i data-lucide="terminal"></i></div>
+            <h4 style="font-weight: 700;">Core Languages</h4>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-tag">JavaScript (Advanced)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-tag">Java (Intermediate)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-tag">Python (Intermediate)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-tag">C++ (Intermediate)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend Engineering -->
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;"><i data-lucide="monitor"></i></div>
+            <h4 style="font-weight: 700;">Frontend Engineering</h4>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-tag">HTML5 / CSS3 (Advanced)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-tag">React.js (Intermediate)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 78%;"></div></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Backend & Databases -->
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i data-lucide="server"></i></div>
+            <h4 style="font-weight: 700;">Backend & Databases</h4>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-tag">Node.js / Express.js (Intermediate)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 74%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-tag">MongoDB / MySQL (Intermediate)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 71%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-tag">RESTful API Architecture (Intermediate)</span>
+              <div class="skill-bar"><div class="skill-progress" style="width: 83%;"></div></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tools -->
+        <div class="skill-category">
+          <div class="skill-header">
+            <div class="skill-icon" style="background: rgba(244, 63, 94, 0.1); color: #f43f5e;"><i data-lucide="settings"></i></div>
+            <h4 style="font-weight: 700;">Tools & Workflow</h4>
+          </div>
+          <div class="skill-list">
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">System Design Fundamentals</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section-padding">
+    <div class="container reveal">
+      <div class="badge"><i data-lucide="box"></i> Portfolio</div>
+      <h2 class="section-title">High-Impact <span>Projects</span></h2>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Management System">
+            <div class="project-overlay">
+              <span class="impact-badge">40% Efficiency Boost</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tech">
+              <span class="tech-tag">MERN Stack</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+            <h3 class="project-title">Hotel Management System</h3>
+            <ul class="project-features">
+              <li>Architected a real-time booking engine with automated availability tracking and conflict resolution.</li>
+              <li>Integrated automated invoicing with PDF generation, reducing manual billing overhead by 40%.</li>
+              <li>Implemented secure role-based access control (RBAC) for staff and administrative dashboards.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/SHEETAL-SUBBANNAVAR/HOTEL-MANAGEMENT-SYSTEM" target="_blank" class="project-link"><i data-lucide="github"></i> Source Code</a>
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Quora Posts Analysis">
+            <div class="project-overlay">
+              <span class="impact-badge">92% Sentiment Accuracy</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Chart.js</span>
+            </div>
+            <h3 class="project-title">Quora Engagement Analysis</h3>
+            <ul class="project-features">
+              <li>Engineered an NLP pipeline to process 10k+ data points with 92% sentiment accuracy for engagement insights.</li>
+              <li>Developed interactive data visualizations to track user behavior and topic trends over time.</li>
+              <li>Optimized MongoDB queries to handle large-scale text data processing with low latency.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/SHEETAL-SUBBANNAVAR/Quora_posts" target="_blank" class="project-link"><i data-lucide="github"></i> Source Code</a>
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Analysis Report</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=800&q=80" alt="Bank Management System">
+            <div class="project-overlay">
+              <span class="impact-badge">100% Data Integrity</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JDBC</span>
+              <span class="tech-tag">Swing</span>
+            </div>
+            <h3 class="project-title">Secure Bank Management</h3>
+            <ul class="project-features">
+              <li>Developed an ACID-compliant transaction system ensuring 100% data integrity for financial operations.</li>
+              <li>Implemented secure multi-user authentication and transaction logging for audit compliance.</li>
+              <li>Optimized relational database schema for high-performance retrieval of transaction histories.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/SHEETAL-SUBBANNAVAR/Bank-Management-System" target="_blank" class="project-link"><i data-lucide="github"></i> Source Code</a>
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> System Docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume-section section-padding">
+    <div class="container resume-container reveal">
+      <div class="badge resume-badge">Career Snapshot</div>
+      <h2 class="resume-title">Ready to <span>Impact</span> Your Engineering Team.</h2>
+      <p class="resume-text">Download my ATS-optimized, 1-page resume for a detailed view of my technical expertise and academic background.</p>
+      <a href="/resume_sheetal_subbannavar.pdf" class="btn btn-resume" target="_blank">
+        Download 1-Page CV <i data-lucide="download"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+ <section id="contact" class="contact section-padding">
+  <div class="container reveal">
+    <div class="contact-grid">
+
+      <!-- LEFT SIDE -->
+      <div class="contact-info">
+        <div class="badge">
+          <i data-lucide="mail"></i> Available for Hiring
+        </div>
+
+        <h2 class="section-title">
+          Let’s Build <span>Scalable</span><br> Solutions Together
+        </h2>
+
+        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">
+          Open to full-time roles, internships, and freelance work. 
+          I usually respond within <b>1–2 hours</b>.
+        </p>
+
+        <!-- EMAIL -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i data-lucide="mail"></i>
+          </div>
+          <div class="contact-details">
+            <p>Email</p>
+            <a href="mailto:sheetalsubbannavar.52@gmail.com">
+              sheetalsubbannavar.52@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- PHONE -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i data-lucide="phone"></i>
+          </div>
+          <div class="contact-details">
+            <p>Phone</p>
+            <a href="tel:+917022713052">+91 XXXXX XXXXX</a>
+          </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i data-lucide="linkedin"></i>
+          </div>
+          <div class="contact-details">
+            <p>LinkedIn</p>
+            <a href="https://www.linkedin.com/in/sheetal-shripal-subbannavar-16631a322/" target="_blank">
+              Connect with me
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE FORM -->
+      <form id="contact-form" class="contact-form">
+        <h3 style="margin-bottom: 1.5rem;">Direct Inquiry</h3>
+
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="name" required placeholder="John Doe (HR / Recruiter)">
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" required placeholder="john@company.com">
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="message" rows="5" required 
+            placeholder="Describe the job role / opportunity..."></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">
+          Send Message <i data-lucide="send"></i>
+        </button>
+
+        <!-- SUCCESS MESSAGE -->
+        <p id="form-status" style="margin-top: 1rem; display:none; color: green;">
+          ✅ Message sent successfully!
+        </p>
+      </form>
+
+    </div>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">Sheetal<span>.dev</span></div>
+      <ul class="footer-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">&copy; 2026 Sheetal Subbannavar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

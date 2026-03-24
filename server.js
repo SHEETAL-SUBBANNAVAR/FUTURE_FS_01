@@ -5,10 +5,7 @@ import { open } from "sqlite";
 import nodemailer from "nodemailer";
 import path from "path";
 import { fileURLToPath } from "url";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-
-
+import fs from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,10 +14,12 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  // Database setup
+  // =========================
+  // DATABASE
+  // =========================
   const db = await open({
     filename: "portfolio.db",
-    driver: sqlite3.Database
+    driver: sqlite3.Database,
   });
 
   await db.exec(`
@@ -33,9 +32,31 @@ async function startServer() {
     );
   `);
 
+  // =========================
+  // MIDDLEWARE
+  // =========================
   app.use(express.json());
 
-  // API Routes
+
+
+
+
+app.get("/resume.pdf", (req, res) => {
+  const filePath = path.resolve(__dirname, "public", "resume.pdf");
+
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send("File not found");
+  }
+
+  res.setHeader("Content-Type", "application/pdf");
+  res.setHeader("Content-Disposition", "inline; filename=resume.pdf");
+
+  const stream = fs.createReadStream(filePath);
+  stream.pipe(res);
+});
+  // =========================
+  // API ROUTES
+  // =========================
   app.post("/api/contact", async (req, res) => {
     const { name, email, message } = req.body;
 
@@ -44,14 +65,11 @@ async function startServer() {
     }
 
     try {
-      // Store in database
       await db.run(
         "INSERT INTO messages (name, email, message) VALUES (?, ?, ?)",
         [name, email, message]
       );
 
-      // Email notification (Mocked/Configurable)
-      // In a real scenario, you'd use real credentials from process.env
       if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
         const transporter = nodemailer.createTransport({
           service: "gmail",
@@ -63,38 +81,45 @@ async function startServer() {
 
         await transporter.sendMail({
           from: process.env.EMAIL_USER,
-          to: process.env.EMAIL_USER, // Send to self
-          subject: `New Portfolio Message from ${name}`,
+          to: process.env.EMAIL_USER,
+          subject: `New Message from ${name}`,
           text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         });
-      } else {
-        console.log("Email credentials not provided, skipping email notification.");
       }
 
-      res.status(200).json({ success: true, message: "Message sent successfully!" });
-    } catch (error) {
-      console.error("Error processing contact form:", error);
-      res.status(500).json({ error: "Internal server error" });
+      res.json({ success: true });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: "Server error" });
     }
   });
 
-  // Vite middleware for development
+  // =========================
+  // VITE (DEV)
+  // =========================
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
+
     app.use(vite.middlewares);
   } else {
-    // Serve static files in production
+    // =========================
+    // PRODUCTION
+    // =========================
     app.use(express.static(path.join(__dirname, "dist")));
+
     app.get("*", (req, res) => {
       res.sendFile(path.join(__dirname, "dist", "index.html"));
     });
   }
 
+  // =========================
+  // START SERVER
+  // =========================
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
   });
 }
 
